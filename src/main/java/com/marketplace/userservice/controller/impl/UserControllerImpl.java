@@ -32,6 +32,9 @@ public class UserControllerImpl implements UserController {
     public SellerUserDTO getSellerUserDetails(@PathVariable("version") String version, @PathVariable("id") String sellerUserId) {
         logger.info("Processing request for getting sellerUserDetails for sellerUserId: {}", sellerUserId);
         SellerUser sellerUser = sellerUserService.getUserDetails(sellerUserId);
+        if (sellerUser == null) {
+            return null;
+        }
         logger.info("Completed processing request for fetching sellerUserDetails for sellerUserId: {}", sellerUserId);
         return convertSellerUserToSellerUserDto(sellerUser, version);
     }

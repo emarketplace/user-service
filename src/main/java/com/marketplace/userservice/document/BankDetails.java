@@ -5,6 +5,7 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
+import org.springframework.data.mongodb.core.mapping.Field;
 
 /**
  * @author Muhammed Shaheer
@@ -18,12 +19,27 @@ import org.springframework.data.mongodb.core.mapping.Document;
 public class BankDetails {
 
     @Id
-    private String _id;
+    @Field(name = "_id")
+    private String bankDetailsId;
+
+    @Field(name = "bankStatementImage")
     private String bankStatementImage;
+
+    @Field(name = "bankAccountName")
     private String bankAccountName;
+
+    @Field(name = "bankAccountNumber")
     private String bankAccountNumber;
+
+    @Field(name = "bankRoutingNumber")
     private String bankRoutingNumber;
+
+    @Field(name = "bankName")
     private String bankName;
+
+    @Field(name = "bankAddress")
     private String bankAddress;
+
+    @Field(name = "bankComments")
     private String bankComments;
 }
