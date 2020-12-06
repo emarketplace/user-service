@@ -1,0 +1,15 @@
+spring:
+  application:
+    name: user-service
+
+server:
+  port: 9701
+  servlet:
+    context-path: /api
+
+springdoc:
+  swagger-ui:
+    path: /user-service/api-specs.html
+  api-docs:
+    enabled: true
+    path: /user-service/api-specs
