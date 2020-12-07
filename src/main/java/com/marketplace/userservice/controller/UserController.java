@@ -1,10 +1,7 @@
 package com.marketplace.userservice.controller;
 
-import com.marketplace.userservice.document.SellerUser;
-import com.marketplace.userservice.dto.SellerUserDTO;
+import com.marketplace.library.dto.user.SellerSignupRequestDTO;
 import io.swagger.v3.oas.annotations.Operation;
-import io.swagger.v3.oas.annotations.media.Content;
-import io.swagger.v3.oas.annotations.media.Schema;
 import io.swagger.v3.oas.annotations.responses.ApiResponse;
 import io.swagger.v3.oas.annotations.tags.Tag;
 
@@ -17,16 +14,12 @@ import io.swagger.v3.oas.annotations.tags.Tag;
 public interface UserController {
 
     @Operation(
-            summary = "Get User Details by userId",
-            description = "Get User Details by userId",
-            operationId = "getSellerUserDetails()",
+            summary = "Signup seller with basic login details",
+            description = "Signup seller with basic login details",
+            operationId = "signupSeller()",
             responses = {
-                    @ApiResponse(responseCode = "200", description = "User Details found", content = @Content(mediaType = "application/json", schema = @Schema(implementation = SellerUserDTO.class)))
+                    @ApiResponse(responseCode = "200")
             }
     )
-    SellerUserDTO getSellerUserDetails(String version, String sellerUserId);
-
-    SellerUserDTO convertSellerUserToSellerUserDto(SellerUser sellerUser, String version);
-
-    SellerUser convertSellerUserToSellerUserDto(SellerUserDTO sellerUserDTO, String version);
+    void signupSeller(SellerSignupRequestDTO sellerSignupRequest);
 }

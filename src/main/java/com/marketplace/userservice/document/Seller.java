@@ -21,7 +21,6 @@ import java.util.Date;
 public class Seller {
 
     @Id
-    @Field(name = "_id")
     private String sellerId;
 
     @Field(name = "legalName")

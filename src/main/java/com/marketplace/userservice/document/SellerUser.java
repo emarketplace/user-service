@@ -21,7 +21,6 @@ import java.util.Date;
 public class SellerUser {
 
     @Id
-    @Field(name = "_id")
     private String userId;
 
     @Field(name = "emailId")
@@ -33,11 +32,8 @@ public class SellerUser {
     @Field(name = "changePassword")
     private Boolean changePassword;
 
-    @Field(name = "orgId")
-    private String orgId;
-
-    @Field(name = "roleId")
-    private String roleId;
+    @Field(name = "sellerId")
+    private String sellerId;
 
     @Field(name = "firstName")
     private String firstName;

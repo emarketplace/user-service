@@ -1,6 +1,7 @@
 package com.marketplace.userservice.service;
 
-import com.marketplace.userservice.document.SellerUser;
+import com.marketplace.library.dto.user.SellerSignupRequestDTO;
+import com.marketplace.userservice.document.Seller;
 
 /**
  * @author Muhammed Shaheer
@@ -8,5 +9,7 @@ import com.marketplace.userservice.document.SellerUser;
  */
 
 public interface SellerUserService {
-    SellerUser getUserDetails(String userId);
+    void signupSellerUser(SellerSignupRequestDTO sellerSignupRequest, Seller seller);
+
+    void checkIfEmailAlreadyRegistered(String emailId);
 }
