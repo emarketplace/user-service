@@ -26,3 +26,17 @@ springdoc:
   api-docs:
     enabled: true
     path: /user-service/api-specs
+
+management:
+  metrics:
+    tags:
+      application: user-service
+  endpoint:
+    restart:
+      enabled: true
+    health:
+      show-details: always
+  endpoints:
+    web:
+      exposure:
+        include: '*'
