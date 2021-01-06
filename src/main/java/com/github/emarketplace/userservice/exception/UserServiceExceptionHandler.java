@@ -1,6 +1,6 @@
 package com.github.emarketplace.userservice.exception;
 
-import com.marketplace.library.dto.exception.ErrorResponseDTO;
+import com.github.emarketplace.library.dto.exception.ErrorResponseDTO;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

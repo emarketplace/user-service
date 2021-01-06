@@ -1,7 +1,7 @@
 package com.github.emarketplace.userservice.service;
 
+import com.github.emarketplace.library.dto.user.SellerSignupRequestDTO;
 import com.github.emarketplace.userservice.document.Seller;
-import com.marketplace.library.dto.user.SellerSignupRequestDTO;
 
 /**
  * @author Muhammed Shaheer

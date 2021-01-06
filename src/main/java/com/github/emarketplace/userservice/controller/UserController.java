@@ -1,6 +1,6 @@
 package com.github.emarketplace.userservice.controller;
 
-import com.marketplace.library.dto.user.SellerSignupRequestDTO;
+import com.github.emarketplace.library.dto.user.SellerSignupRequestDTO;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.responses.ApiResponse;
 import io.swagger.v3.oas.annotations.tags.Tag;

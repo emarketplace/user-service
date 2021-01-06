@@ -1,7 +1,7 @@
 package com.github.emarketplace.userservice.controller.impl;
 
-import com.marketplace.library.dto.user.SellerSignupRequestDTO;
-import com.marketplace.library.util.HashingUtil;
+import com.github.emarketplace.library.dto.user.SellerSignupRequestDTO;
+import com.github.emarketplace.library.util.HashingUtil;
 import com.github.emarketplace.userservice.controller.UserController;
 import com.github.emarketplace.userservice.service.SellerService;
 import lombok.RequiredArgsConstructor;

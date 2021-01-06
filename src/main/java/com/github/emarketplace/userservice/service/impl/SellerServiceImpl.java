@@ -1,11 +1,11 @@
 package com.github.emarketplace.userservice.service.impl;
 
+import com.github.emarketplace.library.dto.user.SellerSignupRequestDTO;
+import com.github.emarketplace.library.util.HashingUtil;
 import com.github.emarketplace.userservice.constants.SellerStatusConstants;
 import com.github.emarketplace.userservice.document.Seller;
 import com.github.emarketplace.userservice.exception.UserServiceBaseException;
 import com.github.emarketplace.userservice.exception.UserServiceError;
-import com.marketplace.library.dto.user.SellerSignupRequestDTO;
-import com.marketplace.library.util.HashingUtil;
 import com.github.emarketplace.userservice.repository.SellerRepository;
 import com.github.emarketplace.userservice.service.SellerService;
 import com.github.emarketplace.userservice.service.SellerUserService;
