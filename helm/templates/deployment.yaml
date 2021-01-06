@@ -48,11 +48,21 @@ spec:
           resources:
             {{- toYaml .Values.resources | nindent 12 }}
           env:
-            - name: SPRING_DATASOURCE_URL
+            - name: SPRING_DATASOURCE_USERNAME
               valueFrom:
                 secretKeyRef:
-                  name: {{ include "helm.fullname" . }}
-                  key: mongodb-url
+                  name: backend-service
+                  key: mongodb-username
+            - name: SPRING_DATASOURCE_PASSWORD
+              valueFrom:
+                secretKeyRef:
+                  name: backend-service
+                  key: mongodb-password
+            - name: SPRING_ACTIVE_PROFILE
+              valueFrom:
+                secretKeyRef:
+                  name: backend-service
+                  key: active-profile
       {{- with .Values.nodeSelector }}
       nodeSelector:
         {{- toYaml . | nindent 8 }}
