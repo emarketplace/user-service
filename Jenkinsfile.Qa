@@ -9,12 +9,16 @@ pipeline {
     stages {
         stage('Test') {
             steps {
-                sh 'mvn clean test'
+                withMaven() {
+                    sh 'mvn clean test'
+                }
             }
         }
         stage('Maven Build') {
             steps {
-                sh 'mvn clean install'
+                withMaven() {
+                    sh 'mvn clean install'
+                }
             }
         }
         stage('Build Docker Image') {
