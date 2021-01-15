@@ -9,14 +9,14 @@ pipeline {
     stages {
         stage('Test') {
             steps {
-                withMaven() {
+                withMaven {
                     sh 'mvn clean test'
                 }
             }
         }
         stage('Maven Build') {
             steps {
-                withMaven() {
+                withMaven {
                     sh 'mvn clean install'
                 }
             }
