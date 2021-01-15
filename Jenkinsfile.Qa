@@ -1,5 +1,8 @@
 pipeline {
     agent any
+    tools {
+        maven 'maven'
+    }
     environment {
         REPOSITORY = "muhammedshaheer"
         IMAGE_NAME = "emarketplace-qa-user-service"
@@ -9,16 +12,12 @@ pipeline {
     stages {
         stage('Test') {
             steps {
-                withMaven {
-                    sh 'mvn clean test'
-                }
+                sh 'mvn clean test'
             }
         }
         stage('Maven Build') {
             steps {
-                withMaven {
-                    sh 'mvn clean install'
-                }
+                sh 'mvn clean install'
             }
         }
         stage('Build Docker Image') {
