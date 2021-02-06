@@ -10,6 +10,12 @@ pipeline {
         SERVICE_NAME = "user-service"
     }
     stages {
+        stage('Start') {
+            steps {
+                sh 'rm ./src/main/resources/application.yaml'
+                sh 'mv ./src/main/resources/application.qa ./src/main/resources/application.yaml'
+            }
+        }
         stage('Test') {
             steps {
                 sh 'mvn clean test'
