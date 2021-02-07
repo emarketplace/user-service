@@ -1,8 +1,8 @@
 spring:
   application:
     name: user-service
-#  profiles:
-#    active: ${SPRING_ACTIVE_PROFILE}
+  profiles:
+    active: ${SPRING_ACTIVE_PROFILE}
   #kubernetesgit properties
   cloud:
     kubernetes:
@@ -16,7 +16,7 @@ spring:
         all-namespaces: true
 
 server:
-#  port: 7001
+  port: 7001
   servlet:
     context-path: /api
 
