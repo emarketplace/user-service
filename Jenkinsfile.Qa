@@ -10,7 +10,7 @@ pipeline {
         stage('Start') {
             steps {
                 sh 'rm ./src/main/resources/application.yaml'
-                sh 'mv ./src/main/resources/application.qa ./src/main/resources/application.yaml'
+                sh 'mv ./src/main/resources/application-qa.yaml ./src/main/resources/application.yaml'
             }
         }
         stage('Test') {
