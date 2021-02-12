@@ -1,8 +1,8 @@
 spring:
   application:
     name: user-service
-  profiles:
-    active: ${ACTIVE_PROFILE}
+#  profiles:
+#    active: ${ACTIVE_PROFILE}
   #kubernetesgit properties
   cloud:
     kubernetes:
